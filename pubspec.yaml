@@ -1,0 +1,32 @@
+name: fcm_customizer
+description: A plugin that lets you customize Fcm notifications for Android and iOS
+version: 0.0.1
+homepage: https://github.com/iabdousd/fcm_customizer
+
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
+  plugin_platform_interface: ^2.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.iabdousd.fcm_customizer
+        pluginClass: FcmCustomizerPlugin
+      ios:
+        pluginClass: FcmCustomizerPlugin
+      web:
+        pluginClass: FcmCustomizerWeb
+        fileName: fcm_customizer_web.dart
